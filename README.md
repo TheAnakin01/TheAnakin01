@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="assets/heatmap.svg" width="860" alt="Contribution heatmap for the last year"/>
+<img src="assets/heatmap.svg?v=202609281509" width="860" alt="Contribution heatmap for the last year"/>
 
 <table>
   <tr>
     <td valign="top"><img src="assets/portrait.svg" width="460" alt="ASCII art portrait"/></td>
-    <td valign="top"><img src="assets/info.svg" width="400" alt="About me: TypeScript and Python, Next.js, Supabase, building a meal planner"/></td>
+    <td valign="top"><img src="assets/info.svg?v=202609281509" width="400" alt="About me: TypeScript and Python, Next.js, Supabase, building a meal planner"/></td>
   </tr>
 </table>
 

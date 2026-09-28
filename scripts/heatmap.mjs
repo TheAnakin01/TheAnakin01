@@ -105,3 +105,11 @@ const info = readFileSync("assets/info.svg", "utf8").replace(
   `$1${total} contribution${total === 1 ? "" : "s"} in the last year$2`,
 );
 writeFileSync("assets/info.svg", info);
+
+// GitHub caches README images; a new ?v= on every refresh forces the latest pictures to show.
+const stamp = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
+const readme = readFileSync("README.md", "utf8").replace(
+  /assets\/(heatmap|info)\.svg(\?v=\w+)?/g,
+  (_, name) => `assets/${name}.svg?v=${stamp}`,
+);
+writeFileSync("README.md", readme);
