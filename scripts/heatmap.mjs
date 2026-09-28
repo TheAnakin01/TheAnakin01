@@ -1,6 +1,6 @@
 // Scrapes the public contribution calendar and writes an animated heatmap (assets/heatmap.svg).
 // No dependencies and no token needed. Run: node scripts/heatmap.mjs
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 
 const USER = process.env.GH_USER || "TheAnakin01";
 const res = await fetch(`https://github.com/users/${USER}/contributions`, {
@@ -85,3 +85,10 @@ ${monthLabels.join("")}
 `;
 writeFileSync("assets/heatmap.svg", svg);
 console.log(`assets/heatmap.svg written: ${days.length} days, ${total} contributions`);
+
+// Keep the "Activity" line on the info card in step with the heatmap.
+const info = readFileSync("assets/info.svg", "utf8").replace(
+  /(<tspan x="112" id="contrib">)[^<]*(<\/tspan>)/,
+  `$1${total} contribution${total === 1 ? "" : "s"} in the last year$2`,
+);
+writeFileSync("assets/info.svg", info);

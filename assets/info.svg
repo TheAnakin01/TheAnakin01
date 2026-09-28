@@ -22,14 +22,15 @@
 <text x="20" y="226" class="l" style="animation-delay:1.6s"><tspan class="k">AI / ML</tspan><tspan x="112">Gemini API, Jupyter</tspan></text>
 <text x="20" y="250" class="l" style="animation-delay:1.8s"><tspan class="k">Tools</tspan><tspan x="112">Git, Vercel, Obsidian</tspan></text>
 <text x="20" y="274" class="l" style="animation-delay:2.0s"><tspan class="k">Building</tspan><tspan x="112">meal-planner (PWA)</tspan></text>
-<text x="20" y="298" class="l" style="animation-delay:2.2s"><tspan class="k">Uptime</tspan><tspan x="112">always learning</tspan></text>
-<text x="20" y="330" class="l m" style="animation-delay:2.5s">"You're waiting for a train. A train</text>
-<text x="20" y="348" class="l m" style="animation-delay:2.6s">&#160;that will take you far away..."</text>
+<text x="20" y="298" class="l" style="animation-delay:2.2s"><tspan class="k">Activity</tspan><tspan x="112" id="contrib">64 contributions in the last year</tspan></text>
+<text x="20" y="322" class="l" style="animation-delay:2.4s"><tspan class="k">Uptime</tspan><tspan x="112">always learning</tspan></text>
+<text x="20" y="352" class="l m" style="animation-delay:2.6s">"You're waiting for a train. A train</text>
+<text x="20" y="370" class="l m" style="animation-delay:2.7s">&#160;that will take you far away..."</text>
 <g class="l" style="animation-delay:2.9s">
-  <rect x="20" y="370" width="26" height="14" fill="#161b22"/><rect x="46" y="370" width="26" height="14" fill="#ff5f56"/>
-  <rect x="72" y="370" width="26" height="14" fill="#27c93f"/><rect x="98" y="370" width="26" height="14" fill="#ffbd2e"/>
-  <rect x="124" y="370" width="26" height="14" fill="#58a6ff"/><rect x="150" y="370" width="26" height="14" fill="#bc8cff"/>
-  <rect x="176" y="370" width="26" height="14" fill="#39c5cf"/><rect x="202" y="370" width="26" height="14" fill="#c9d1d9"/>
+  <rect x="20" y="388" width="26" height="14" fill="#161b22"/><rect x="46" y="388" width="26" height="14" fill="#ff5f56"/>
+  <rect x="72" y="388" width="26" height="14" fill="#27c93f"/><rect x="98" y="388" width="26" height="14" fill="#ffbd2e"/>
+  <rect x="124" y="388" width="26" height="14" fill="#58a6ff"/><rect x="150" y="388" width="26" height="14" fill="#bc8cff"/>
+  <rect x="176" y="388" width="26" height="14" fill="#39c5cf"/><rect x="202" y="388" width="26" height="14" fill="#c9d1d9"/>
 </g>
-<text x="20" y="424" class="l" style="animation-delay:3.2s"><tspan class="k">$</tspan><tspan x="36" class="cur">▌</tspan></text>
+<text x="20" y="432" class="l" style="animation-delay:3.2s"><tspan class="k">$</tspan><tspan x="36" class="cur">▌</tspan></text>
 </svg>
