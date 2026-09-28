@@ -59,6 +59,18 @@ days.forEach((d, i) => {
     `<rect x="${LEFT + col * STEP}" y="${TOP + row * STEP}" width="${CELL}" height="${CELL}" rx="2.5" fill="${COLORS[d.level]}" style="animation-delay:${delay}s"><title>${d.count} on ${d.date}</title></rect>`,
   );
 });
+// Stats shown under the grid: active days, best day, current streak.
+const active = days.filter((d) => d.count > 0);
+const best = active.reduce((a, d) => (d.count > (a?.count ?? 0) ? d : a), null);
+let streak = 0;
+for (let i = days.length - 1; i >= 0; i--) {
+  if (days[i].count > 0) streak++;
+  else if (i < days.length - 1 || streak > 0) break; // today may still be empty
+}
+const fmt = (iso) => { const d = new Date(iso + "T00:00:00Z"); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`; };
+const stats = best
+  ? `<tspan class="p">${active.length}</tspan> active days &#160;·&#160; best day <tspan class="p">${best.count}</tspan> (${fmt(best.date)}) &#160;·&#160; streak <tspan class="p">${streak}</tspan> day${streak === 1 ? "" : "s"}`
+  : "no contributions yet";
 const cols = Math.ceil((days.length + offset) / 7);
 const HEIGHT = TOP + 7 * STEP + 40;
 const legendX = LEFT + cols * STEP - 5 * STEP - 70;
@@ -80,6 +92,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${
 ${monthLabels.join("")}
 <text x="6" y="${TOP + 1 * STEP + 10}">Mon</text><text x="6" y="${TOP + 3 * STEP + 10}">Wed</text><text x="6" y="${TOP + 5 * STEP + 10}">Fri</text>
 <g class="c">${cells.join("")}</g>
+<text x="${LEFT}" y="${HEIGHT - 16}" xml:space="preserve" style="font-size:11px">${stats}</text>
 <text x="${legendX}" y="${HEIGHT - 16}">Less</text>${legend}<text x="${legendX + 34 + 5 * STEP + 4}" y="${HEIGHT - 16}">More</text>
 </svg>
 `;
