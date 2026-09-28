@@ -1,0 +1,12 @@
+{
+  "name": "theanakin01-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "portrait": "node scripts/portrait.mjs",
+    "heatmap": "node scripts/heatmap.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

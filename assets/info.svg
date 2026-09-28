@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="452" viewBox="0 0 400 452" role="img" aria-label="About Anakin: TypeScript and Python developer in India, building a meal planner web app">
+<style>
+  text { font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size: 13px; fill: #c9d1d9; }
+  .k { fill: #39d353; font-weight: 700; }
+  .m { fill: #8b949e; }
+  .t { fill: #39d353; font-weight: 700; font-size: 15px; }
+  .l { opacity: 0; animation: in .5s ease-out forwards; }
+  @keyframes in { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+  .cur { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .l { animation: none; opacity: 1; } .cur { animation: none; } }
+</style>
+<rect width="100%" height="100%" rx="10" fill="#0d1117" stroke="#30363d"/>
+<circle cx="20" cy="18" r="5" fill="#ff5f56"/><circle cx="36" cy="18" r="5" fill="#ffbd2e"/><circle cx="52" cy="18" r="5" fill="#27c93f"/>
+<text x="20" y="54" class="l" style="animation-delay:.2s"><tspan class="k">$</tspan><tspan x="36">neofetch</tspan></text>
+<text x="20" y="86" class="l t" style="animation-delay:.5s">anakin<tspan class="m">@</tspan>github</text>
+<text x="20" y="104" class="l m" style="animation-delay:.6s">──────────────────────</text>
+<text x="20" y="130" class="l" style="animation-delay:.8s"><tspan class="k">Location</tspan><tspan x="112">India</tspan></text>
+<text x="20" y="154" class="l" style="animation-delay:1.0s"><tspan class="k">Languages</tspan><tspan x="112">TypeScript, Python</tspan></text>
+<text x="20" y="178" class="l" style="animation-delay:1.2s"><tspan class="k">Frontend</tspan><tspan x="112">Next.js, React, Tailwind</tspan></text>
+<text x="20" y="202" class="l" style="animation-delay:1.4s"><tspan class="k">Backend</tspan><tspan x="112">Supabase (Postgres)</tspan></text>
+<text x="20" y="226" class="l" style="animation-delay:1.6s"><tspan class="k">AI / ML</tspan><tspan x="112">Gemini API, Jupyter</tspan></text>
+<text x="20" y="250" class="l" style="animation-delay:1.8s"><tspan class="k">Tools</tspan><tspan x="112">Git, Vercel, Obsidian</tspan></text>
+<text x="20" y="274" class="l" style="animation-delay:2.0s"><tspan class="k">Building</tspan><tspan x="112">meal-planner (PWA)</tspan></text>
+<text x="20" y="298" class="l" style="animation-delay:2.2s"><tspan class="k">Uptime</tspan><tspan x="112">always learning</tspan></text>
+<text x="20" y="330" class="l m" style="animation-delay:2.5s">"You're waiting for a train. A train</text>
+<text x="20" y="348" class="l m" style="animation-delay:2.6s">&#160;that will take you far away..."</text>
+<g class="l" style="animation-delay:2.9s">
+  <rect x="20" y="370" width="26" height="14" fill="#161b22"/><rect x="46" y="370" width="26" height="14" fill="#ff5f56"/>
+  <rect x="72" y="370" width="26" height="14" fill="#27c93f"/><rect x="98" y="370" width="26" height="14" fill="#ffbd2e"/>
+  <rect x="124" y="370" width="26" height="14" fill="#58a6ff"/><rect x="150" y="370" width="26" height="14" fill="#bc8cff"/>
+  <rect x="176" y="370" width="26" height="14" fill="#39c5cf"/><rect x="202" y="370" width="26" height="14" fill="#c9d1d9"/>
+</g>
+<text x="20" y="424" class="l" style="animation-delay:3.2s"><tspan class="k">$</tspan><tspan x="36" class="cur">▌</tspan></text>
+</svg>
