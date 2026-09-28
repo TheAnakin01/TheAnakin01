@@ -1,6 +1,6 @@
 // Scrapes the public contribution calendar and writes an animated heatmap (assets/heatmap.svg).
 // No dependencies and no token needed. Run: node scripts/heatmap.mjs
-import { readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 
 const USER = process.env.GH_USER || "TheAnakin01";
 const res = await fetch(`https://github.com/users/${USER}/contributions`, {
@@ -106,10 +106,15 @@ const info = readFileSync("assets/info.svg", "utf8").replace(
 );
 writeFileSync("assets/info.svg", info);
 
-// GitHub caches README images; a new ?v= on every refresh forces the latest pictures to show.
+// Browsers and GitHub cache README images by URL, so each refresh publishes the pictures under
+// new file names (assets/live/*-<time>.svg), deletes the old ones and points README.md at them.
 const stamp = new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "");
+mkdirSync("assets/live", { recursive: true });
+for (const f of readdirSync("assets/live")) unlinkSync(`assets/live/${f}`);
+copyFileSync("assets/heatmap.svg", `assets/live/heatmap-${stamp}.svg`);
+copyFileSync("assets/info.svg", `assets/live/info-${stamp}.svg`);
 const readme = readFileSync("README.md", "utf8").replace(
-  /assets\/(heatmap|info)\.svg(\?v=\w+)?/g,
-  (_, name) => `assets/${name}.svg?v=${stamp}`,
+  /assets\/(?:live\/)?(heatmap|info)(?:-\d+)?\.svg(?:\?v=\w+)?/g,
+  (_, name) => `assets/live/${name}-${stamp}.svg`,
 );
 writeFileSync("README.md", readme);
